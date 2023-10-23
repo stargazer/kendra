@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  kendra:
+    build: .
+    volumes:
+     - ./code:/code
+    entrypoint: python kendra_retriever_open_ai.py
+    stdin_open: true
+    tty: true
